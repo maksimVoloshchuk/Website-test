@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SushiyaRoll - Доставка суші</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайту -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>🍱 SushiyaRoll</h1>
+                    <p class="tagline">Справжня японська кухня</p>
+                </div>
+                <nav class="nav">
+                    <a href="#menu" class="nav-link">Меню</a>
+                    <a href="#about" class="nav-link">Про нас</a>
+                    <a href="#delivery" class="nav-link">Доставка</a>
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                        <span class="cart-total" id="cartTotal">0 грн</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Головний банер -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">Доставка найсмачніших суші у місті</h2>
+            <p class="hero-subtitle">61 унікальна позиція з авторськими рецептами</p>
+            <a href="#menu" class="hero-btn">Переглянути меню</a>
+        </div>
+    </section>
+
+    <!-- Секція меню -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Наше меню</h2>
+            <p class="section-subtitle">Оберіть страву для перегляду детального рецепту та складу</p>
+            
+            <!-- Фільтр категорій -->
+            <div class="category-filter" id="categoryFilter">
+                <button class="filter-btn active" data-category="all">Всі страви</button>
+            </div>
+
+            <!-- Сітка меню -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Картки будуть додані динамічно через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Про нас -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Про нас</h2>
+            <div class="about-content">
+                <div class="about-item">
+                    <i class="fas fa-utensils about-icon"></i>
+                    <h3>Авторські рецепти</h3>
+                    <p>Кожна страва готується за унікальною технічною картою з дотриманням всіх традицій</p>
+                </div>
+                <div class="about-item">
+                    <i class="fas fa-leaf about-icon"></i>
+                    <h3>Свіжі інгредієнти</h3>
+                    <p>Використовуємо тільки найсвіжіші продукти преміум-класу</p>
+                </div>
+                <div class="about-item">
+                    <i class="fas fa-shipping-fast about-icon"></i>
+                    <h3>Швидка доставка</h3>
+                    <p>Доставляємо ваше замовлення протягом 60 хвилин</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Доставка -->
+    <section id="delivery" class="delivery-section">
+        <div class="container">
+            <h2 class="section-title">Доставка та оплата</h2>
+            <div class="delivery-info">
+                <div class="delivery-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Час доставки</h3>
+                    <p>45-60 хвилин</p>
+                </div>
+                <div class="delivery-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Зона доставки</h3>
+                    <p>Весь місто</p>
+                </div>
+                <div class="delivery-card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Оплата</h3>
+                    <p>Готівка або картка</p>
+                </div>
+                <div class="delivery-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Зв'язок</h3>
+                    <p>+380 XX XXX XX XX</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SushiyaRoll</h3>
+                    <p>Справжня японська кухня з доставкою</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакти</h4>
+                    <p><i class="fas fa-phone"></i> +380 XX XXX XX XX</p>
+                    <p><i class="fas fa-envelope"></i> info@sushiyaroll.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Графік роботи</h4>
+                    <p>Пн-Нд: 10:00 - 22:00</p>
+                    <p>Без вихідних</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Соціальні мережі</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SushiyaRoll. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно деталей страви -->
+    <div class="modal" id="dishModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="" alt="" id="modalImage">
+                </div>
+                <div class="modal-details">
+                    <span class="modal-category" id="modalCategory"></span>
+                    <h2 class="modal-title" id="modalTitle"></h2>
+                    <div class="modal-info">
+                        <span class="modal-weight" id="modalWeight">
+                            <i class="fas fa-weight"></i> <span></span>
+                        </span>
+                        <span class="modal-price" id="modalPrice"></span>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3><i class="fas fa-list"></i> Детальний склад</h3>
+                        <pre class="modal-composition" id="modalComposition"></pre>
+                    </div>
+
+                    <div class="modal-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" id="qtyMinus">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="20">
+                            <button class="qty-btn" id="qtyPlus">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <button class="add-to-cart-btn" id="addToCartBtn">
+                            <i class="fas fa-shopping-cart"></i>
+                            Додати в кошик
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальне вікно кошика -->
+    <div class="modal" id="cartModal">
+        <div class="modal-overlay" id="cartModalOverlay"></div>
+        <div class="modal-content cart-modal-content">
+            <button class="modal-close" id="cartModalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="cart-header">
+                <h2><i class="fas fa-shopping-cart"></i> Кошик</h2>
+            </div>
+            <div class="cart-body" id="cartBody">
+                <!-- Товари в кошику -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total-row">
+                    <span>Всього:</span>
+                    <span class="cart-total-price" id="cartModalTotal">0 грн</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">
+                    <i class="fas fa-check"></i>
+                    Оформити замовлення
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Скрипти -->
+    <script src="js/menu-data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
